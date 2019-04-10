@@ -1,0 +1,83 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.Login .title {
+  font-size: 2em;
+}
+
+.Login button {
+  margin: 20px;
+  background: purple;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  height: 2.5em;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.Login button:hover {
+  cursor: pointer;
+}
+
+.Login .form input {
+  height: 2em;
+  width: 100%;
+  margin: 10px;
+}
+
+.Login .login-header {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.Login .logo-text {
+  font-size: 2.1em;
+  margin-left: 10px;
+  color: white;
+}
+
+.Login .logo-img {
+  height: 30px;
+}
+
+.Login .sign-up {
+  margin: 20px 20px 10px 20px;
+  font-size: 1.2em;
+}
+
+.Login .sign-up-button {
+  width: 80%;
+  margin: 20px;
+  background: purple;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  height: 33.33px;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login .form.sign-up-form {
+  border-bottom: none;
+}

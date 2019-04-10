@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tajawal", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

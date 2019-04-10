@@ -1,0 +1,14 @@
+.NavMenuButton {
+    margin-right: 10px;
+    color: white;
+    background: black;
+    border: none;
+}
+
+.NavMenuButton:hover {
+    cursor: pointer;
+}
+
+.fa-bars {
+    font-size: 2em;
+}

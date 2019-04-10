@@ -1,0 +1,55 @@
+.Lists .main-container {
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Lists .main-container h1 {
+  font-size: 2.5em;
+}
+
+.Lists .list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Lists a:hover {
+  font-weight: bold;
+}
+
+.Lists .list-section button {
+  margin: 20px;
+  background: purple;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  height: 2.5em;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  width: 80%;
+  border-radius: 10px;
+}
+
+.Lists .list-section button:hover {
+  cursor: pointer;
+}
+
+.Lists .new-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.Lists .new-list-form input {
+  height: 2em;
+  margin: 10px;
+  width: 100%;
+}
+
+.Lists .new-list-form button {
+  width: 100%;
+}
