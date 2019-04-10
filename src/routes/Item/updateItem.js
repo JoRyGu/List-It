@@ -3,7 +3,7 @@ const tokenIsValid = require('../../../authorization/tokenIsValid');
 const { validationResult } = require('express-validator/check');
 
 const updateItem = async (req, res) => {
-    const { description, notes } = req.body;
+    const { description, notes, isComplete } = req.body;
     const userId = parseInt(req.params.userId);
     const token = req.get('authorization').substring(7);
     const errors = validationResult(req);
@@ -19,7 +19,8 @@ const updateItem = async (req, res) => {
     try {
         const updated = await Item.update({
             description,
-            notes
+            notes,
+            isComplete
         }, {
             where: {
                 id: parseInt(req.params.itemId)
@@ -33,7 +34,8 @@ const updateItem = async (req, res) => {
             return res.status(200).json({
                 success: {
                     description: updatedItem.description,
-                    notes: updatedItem.notes
+                    notes: updatedItem.notes,
+                    isComplete: updatedItem.isComplete
                 }
             });
         } else {

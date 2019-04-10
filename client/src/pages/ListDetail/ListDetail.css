@@ -1,0 +1,51 @@
+.List .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+
+}
+
+.List .main-container h1 {
+  font-size: 2.5em;
+
+}
+
+.List .list-container {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.List .main-container button {
+  margin: 20px;
+  background: purple;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  height: 2.5em;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  width: 80%;
+  border-radius: 10px;
+}
+
+.List .main-container button:hover {
+  cursor: pointer;
+}
+
+.List .new-item-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.List .new-item-form input {
+  height: 2em;
+  margin: 20px 10px 0 10px;
+  width: 100%;
+}
+
+.List .new-item-form button {
+  width: 100%;
+}

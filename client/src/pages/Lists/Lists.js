@@ -1,26 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import { AuthContext } from "../../components/Authentication/Authentication";
 import "./Lists.css";
 import Navbar from "../../components/Navbar/Navbar";
+import getUser from '../../components/getUser';
 
 export default (props) => {
-  const context = useContext(AuthContext);
-  const [user, setUser] = useState({});
+  const [user] = useState(getUser());
   const [lists, setLists] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [formIsVisible, setFormIsVisible] = useState(false);
   const [formData, setFormData] = useState({name: '', category: ''});
+  const [editListIsVisible, setEditListIsVisible] = useState(false);
 
   useEffect(() => {
     getLists();
   }, [user]);
-
-  useEffect(() => {
-    setUser(context.userData);
-  });
 
   useEffect(() => {
     if (user.id && parseInt(props.match.params.userId) !== user.id) {
@@ -58,7 +54,6 @@ export default (props) => {
           category: formData.category
         }
       });
-      console.log(res);
 
       await getLists();
       setFormData({name: '', category: ''});
@@ -74,6 +69,23 @@ export default (props) => {
     setFormData(newFormData);
   }
 
+  const handleDelete = async (event) => {
+    const listId = parseInt(event.target.id);
+    try {
+      await axios({
+        method: 'delete',
+        url: `/api/users/${user.id}/lists/${listId}`,
+        headers: {
+          Authorization: `Bearer ${user.token}`
+        }
+      });
+      const newLists = [...lists].filter(list => list.id !== listId);
+      setLists(newLists);
+    } catch (err) {
+      console.log(err.response);
+    }
+  }
+
   return (
     <div className="Lists">
       <Navbar />
@@ -85,10 +97,14 @@ export default (props) => {
           ) : (
             <ul>
               {lists.map(list => (
-                <li key={list.id}>
+                <li key={list.id} className="list-of-lists">
                   <Link to={`/users/${user.id}/lists/${list.id}`}>
                     {list.name}
                   </Link>
+                  <div>
+                    <i className="fas fa-edit"></i>
+                    <i className="fas fa-trash" id={list.id} onClick={handleDelete}></i>
+                  </div>
                 </li>
               ))}
             </ul>

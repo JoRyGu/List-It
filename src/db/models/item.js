@@ -8,6 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     notes: {
       type: DataTypes.STRING,
     },
+    isComplete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
     listId: {
       type: DataTypes.INTEGER,
       allowNull: false,

@@ -15,6 +15,11 @@ module.exports = {
       notes: {
         type: Sequelize.STRING
       },
+      isComplete: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+      },
       listId: {
         type: Sequelize.INTEGER,
         allowNull: false,

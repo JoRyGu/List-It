@@ -1,0 +1,46 @@
+.Item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item p {
+  font-size: 1.2em;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Item .actions i {
+  margin: 0 5px;
+}
+
+.Item .actions i:hover {
+  cursor: pointer;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: rgba(0,0,0,0.5);
+}
+
+.not-complete {
+  text-decoration: none;
+}
+
+.Item .edit-form {
+  display: flex;
+}
+
+.Item .edit-form input {
+  height: 23.5px;
+  margin-right: 10px;
+  max-width: 120px;
+}
+
+#edit-item {
+  margin: 0 0 0 20px;
+  max-width: 67px;
+  height: 23.5px;
+}

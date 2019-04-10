@@ -12,12 +12,16 @@
 .Lists .list-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  width: 80%;
+  font-size: 1.2em;
 }
 
 .Lists a:hover {
   font-weight: bold;
+}
+
+.Lists a {
+  font-size: 1.2em;
 }
 
 .Lists .list-section button {
@@ -52,4 +56,17 @@
 
 .Lists .new-list-form button {
   width: 100%;
+}
+
+.list-of-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-of-lists i {
+  margin: 0 5px;
+}
+
+.list-of-lists i:hover {
+  cursor: pointer;
 }

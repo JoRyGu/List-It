@@ -10,7 +10,7 @@ export default () => {
       <Navbar />
       <div className="hero-container">
         <h1 className="hero-header">Real time lists for everyone.</h1>
-        <button className="hero-button"><Link to="/signup">SIGN UP TODAY</Link></button>
+        <button className="hero-button"><Link to="/login">SIGN UP TODAY</Link></button>
       </div>
     </div>
   );

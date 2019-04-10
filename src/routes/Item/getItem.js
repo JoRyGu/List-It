@@ -21,7 +21,8 @@ const getItem = async (req, res) => {
                 description: item.description,
                 notes: item.notes,
                 partOfList: list.name,
-                ownedBy: `${user.firstName} ${user.lastName}`    
+                ownedBy: `${user.firstName} ${user.lastName}`,
+                isComplete: item.isComplete 
             });
         } else {
             return res.status(400).json({ error: 'Could not find Item with that ID.' });

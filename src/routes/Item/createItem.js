@@ -25,10 +25,7 @@ const createItem = async (req, res) => {
         });
 
         if (newItem) {
-            return res.status(200).json({
-                description: newItem.description,
-                notes: newItem.notes
-            });
+            return res.status(200).json({newItem});
         } else {
             return res.status(400).json({ error: 'Item could not be created.' });
         }
